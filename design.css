@@ -1,0 +1,15 @@
+input[type=text]{
+	width:40%;
+}
+
+input[type=email]{
+	width:40%;
+}
+#submit{
+	transition-duration: 0.5s ;
+	opacity: 0.8;
+}
+#submit:hover{
+	background-color: #0032FF;
+	color: white;
+}

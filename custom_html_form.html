@@ -7,14 +7,15 @@
 		<meta charset="UTF-8" content="Custom HTML Form">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="design.css">
-		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<script src="form_validation.js"></script>
 </head>
 
-<div class="container">
+<div class="container border mt-3 p-4">
 	<h3>Custom HTML form</h3><br>
 	
 	<ul class="nav nav-tabs" role="tablist">
@@ -32,24 +33,21 @@
 	
 			<form class="was-validated">
 				<div class="form-group">
-					<label for="name">Name :</label>
-					<input id="username" type="name" class="form-control" name="name" placeholder="Enter your name" autocomplete="on" required>
+						<input id="username" type="text" class="input field form-control" placeholder="Name" autocomplete="on" data-toggle="tooltip" data-placement="left" title="Enter your name." required>
+						<div class="invalid-feedback">This field is required.</div>
+				</div>
+		
+				<div class="form-group">
+					<input id="useremail" type="email" class="form-control" placeholder="Email" autocomplete="on" data-toggle="tooltip" data-placement="left" title="Enter your email." required>
 					<div class="invalid-feedback">This field is required.</div>
 				</div>
 		
 				<div class="form-group">
-					<label for="email">Email :</label>
-					<input id="useremail" type="email" class="form-control" name="email" placeholder="Enter your email" autocomplete="on" required>
-					<div class="invalid-feedback">This field is required.</div>
-				</div>
-		
-				<div class="form-group">
-					<label for="comment">Comment :</label>
-					<textarea id="commenttext" class="form-control" rows="5" placeholder="Write your comment" required></textarea>
+					<textarea id="commenttext" class="form-control" rows="8" placeholder="Your comment..." data-toggle="tooltip" data-placement="left" title="Write your comment." required></textarea>
 					<div class="invalid-feedback">This field is requited.</div>
 				</div>
 				
-				<button type="button" class="btn btn-primary" onclick="formValidation()" data-toggle="modal" data-target="#outmodal">Send</button>
+				<button id="submit" type="button" class="btn btn-primary" onclick="formValidation()" data-toggle="modal" data-target="#outmodal">Send</button>
 				
 				<div class="modal fade" id="outmodal">
 					<div class="modal-dialog modal-dialog-centered">
@@ -63,17 +61,22 @@
 							</div>
 						</div>
 					</div>
-		</div>
+				</div>
+				
 			</form>
-			
-		</div>
 		
+		</div>
 		<div class="tab-pane container" id="form2">
-		
+			<p>Not ready yet!</p>
 		</div>
-		
+					
 	</div>
-		
-</div>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+</body>
+</html>
 
 		
