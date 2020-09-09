@@ -1,17 +1,18 @@
 function formValidation(){
 	
-	var name , email , comment , finalmsg , error , head , msg ;
+	var firstname , lastname , email , comment , finalmsg , error , head , msg ;
 	
 	finalmsg = document.getElementById("modalmessage");
 	finalmsg.innerHTML = "" ;
 	head = document.getElementById("modalhead");
 	head.innerHTML = "" ;
-	name = document.getElementById("username").value ;
+	firstname = document.getElementById("fname").value ;
+	lastname = document.getElementById("lname").value ;
 	email = document.getElementById("useremail").value ;
 	comment = document.getElementById("commenttext").value ;
 	
 	/*Empty field*/
-	if(name=="" || email=="" || comment==""){
+	if(firstname=="" || lastname=="" || email=="" || comment==""){
 			error = "Please fill out all necessary fields." ;
 			finalmsg.innerHTML = error ;
 			msg = "Error!"
@@ -32,7 +33,8 @@ function formValidation(){
 	}
 	
 	/* Refresh the form values after all */
-	document.getElementById("username").value = "";
+	document.getElementById("fname").value = "";
+	document.getElementById("lname").value = "";
 	document.getElementById("useremail").value = "";
 	document.getElementById("commenttext").value = "";
 	

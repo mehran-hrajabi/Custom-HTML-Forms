@@ -32,19 +32,19 @@
 			<p>A custom HTML form with name, Email and textarea.</p>
 	
 			<form class="was-validated">
-				<div class="form-group">
-						<input id="username" type="text" class="input field form-control" placeholder="Name" autocomplete="on" data-toggle="tooltip" data-placement="left" title="Enter your name." required>
-						<div class="invalid-feedback">This field is required.</div>
+				<div class="w-25 form-group input-group mb-3">
+					<input id="fname" type="text" class="form-control" placeholder="First Name" autocomplete="on" data-toggle="tooltip" data-placement="left" title="Enter your first name." required>
+					<input id="lname" type="text" class="form-control" placeholder="Last Name" autocomplete="on" data-toggle="tooltip" data-placement="right" title="Enter your last name."required>
+				</div>
+  
+				<div class="w-25 form-group">
+					<input id="useremail" type="email" class="form-control" placeholder="Email" autocomplete="on" data-toggle="tooltip" data-placement="right" title="Enter your email." required>
+					<!--<div class="invalid-feedback">This field is required.</div>-->
 				</div>
 		
-				<div class="form-group">
-					<input id="useremail" type="email" class="form-control" placeholder="Email" autocomplete="on" data-toggle="tooltip" data-placement="left" title="Enter your email." required>
-					<div class="invalid-feedback">This field is required.</div>
-				</div>
-		
-				<div class="form-group">
+				<div class="w-50 form-group">
 					<textarea id="commenttext" class="form-control" rows="8" placeholder="Your comment..." data-toggle="tooltip" data-placement="left" title="Write your comment." required></textarea>
-					<div class="invalid-feedback">This field is requited.</div>
+					<!--<div class="invalid-feedback">This field is requited.</div>-->
 				</div>
 				
 				<button id="submit" type="button" class="btn btn-primary" onclick="formValidation()" data-toggle="modal" data-target="#outmodal">Send</button>
