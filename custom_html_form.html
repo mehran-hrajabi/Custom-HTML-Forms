@@ -67,7 +67,39 @@
 		
 		</div>
 		<div class="tab-pane container" id="form2">
-			<p>Not ready yet!</p>
+			<div class="d-flex justify-content-center">
+				<div class="card m-2 w-45">
+					<div class="card-header">
+						<h3 style="text-align:center">Login</h3>
+					</div>
+					
+					<div class="card-body bg-light">
+						<form>
+							<div class="form-group">
+								<label for="usrname">Username:</label>
+								<input type="text" id="usrname" class="form-control" placeholder="Enter your username" autocomplete="on"> 
+							</div>
+							
+							<div class="form-group">
+								<label for="pwd">Password:</label>
+								<input type="password" id="pwd" class="form-control" placeholder="Enter your password" autocomplete="off"> 
+								<a href="#forgot_password" style="float:right" class="card-link">Forgot password?</a>
+							</div>
+							
+							<div class="form-group form-check">
+								<label class="form-check-label"><input type="checkbox" class="form-check-input" value=""> Remember me</label>
+							</div>
+							
+							<button type="button" class="btn btn-primary mb-2 w-100">Login</button><br>
+							<p id="text">Don't have an account? <a href="#sign_up" class="card-link">Sign up</a></p>
+						</form>
+					</div>
+					
+					<div class="card-footer">
+						<p id="text">Or sign in using your social media account:</p>
+					</div>
+				</div>
+			</div>	
 		</div>
 					
 	</div>
