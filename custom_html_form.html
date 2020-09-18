@@ -32,17 +32,17 @@
 			<p>A custom HTML form with name, Email and textarea.</p>
 	
 			<form class="was-validated">
-				<div class="w-25 form-group input-group mb-3">
+				<div class="form-group input-group mb-3" id="name">
 					<input id="fname" type="text" class="form-control" placeholder="First Name" autocomplete="on" data-toggle="tooltip" data-placement="left" title="Enter your first name." required>
 					<input id="lname" type="text" class="form-control" placeholder="Last Name" autocomplete="on" data-toggle="tooltip" data-placement="right" title="Enter your last name."required>
 				</div>
   
-				<div class="w-25 form-group">
+				<div class="form-group">
 					<input id="useremail" type="email" class="form-control" placeholder="Email" autocomplete="on" data-toggle="tooltip" data-placement="right" title="Enter your email." required>
 					<!--<div class="invalid-feedback">This field is required.</div>-->
 				</div>
 		
-				<div class="w-50 form-group">
+				<div class="form-group">
 					<textarea id="commenttext" class="form-control" rows="8" placeholder="Your comment..." data-toggle="tooltip" data-placement="left" title="Write your comment." required></textarea>
 					<!--<div class="invalid-feedback">This field is requited.</div>-->
 				</div>
@@ -96,7 +96,10 @@
 					</div>
 					
 					<div class="card-footer">
-						<p id="text">Or sign in using your social media account:</p>
+						<p id="text">Or log in with:</p>
+						<a href="#" class="fa fa-facebook facebook"> Facebook</a>
+						<a href="#" class="fa fa-twitter twitter"> Twitter</a>
+						<a href="#" class="fa fa-google google"> Google+</a>
 					</div>
 				</div>
 			</div>	
