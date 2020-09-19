@@ -6,9 +6,9 @@
 	<title>Custom HTML Form</title>
 		<meta charset="UTF-8" content="Custom HTML Form">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="design.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="design.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -47,7 +47,7 @@
 					<!--<div class="invalid-feedback">This field is requited.</div>-->
 				</div>
 				
-				<button id="submit" type="button" class="btn btn-primary" onclick="formValidation()" data-toggle="modal" data-target="#outmodal">Send</button>
+				<button type="button" class="submit btn btn-success" onclick="formValidation()" data-toggle="modal" data-target="#outmodal">Send</button>
 				
 				<div class="modal fade" id="outmodal">
 					<div class="modal-dialog modal-dialog-centered">
@@ -69,11 +69,11 @@
 		<div class="tab-pane container" id="form2">
 			<div class="d-flex justify-content-center">
 				<div class="card m-2 w-45">
-					<div class="card-header">
+					<div class="card-header p-1">
 						<h3 style="text-align:center">Login</h3>
 					</div>
 					
-					<div class="card-body bg-light">
+					<div class="card-body bg-light pb-0">
 						<form>
 							<div class="form-group">
 								<label for="usrname">Username:</label>
@@ -83,20 +83,20 @@
 							<div class="form-group">
 								<label for="pwd">Password:</label>
 								<input type="password" id="pwd" class="form-control" placeholder="Enter your password" autocomplete="off"> 
-								<a href="#forgot_password" style="float:right" class="card-link">Forgot password?</a>
+								<a id="forgot" href="#forgot_password" style="float:right" class="card-link">Forgot password?</a>
 							</div>
 							
 							<div class="form-group form-check">
 								<label class="form-check-label"><input type="checkbox" class="form-check-input" value=""> Remember me</label>
 							</div>
 							
-							<button type="button" class="btn btn-primary mb-2 w-100">Login</button><br>
-							<p id="text">Don't have an account? <a href="#sign_up" class="card-link">Sign up</a></p>
+							<button type="button" class="submit btn btn-success btn-block mb-2 w-100">Login</button><br>
+							<p class="text">Don't have an account? <a href="#sign_up" class="card-link">Sign up</a></p>
 						</form>
 					</div>
 					
 					<div class="card-footer">
-						<p id="text">Or log in with:</p>
+						<p class="text">Or log in with:</p>
 						<a href="#" class="fa fa-facebook facebook"> Facebook</a>
 						<a href="#" class="fa fa-twitter twitter"> Twitter</a>
 						<a href="#" class="fa fa-google google"> Google+</a>
@@ -106,6 +106,7 @@
 		</div>
 					
 	</div>
+	
 <script>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
