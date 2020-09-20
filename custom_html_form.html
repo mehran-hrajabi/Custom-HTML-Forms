@@ -18,6 +18,7 @@
 <div class="container border mt-3 p-4">
 	<h3>Custom HTML form</h3><br>
 	
+	<!-- Using Bootstrap4 toggleable tabs-->
 	<ul class="nav nav-tabs" role="tablist">
 		<li class="nav-item">
 			<a class="nav-link avtive" data-toggle="tab" href="#form1">Comment Section</a>
@@ -30,7 +31,8 @@
 	<div class="tab-content">
 		<div class="tab-pane contanier" id="form1">
 			<p>A custom HTML form with name, Email and textarea.</p>
-	
+			
+			<!-- Using Bootstrap4 classes for creating a form-->
 			<form class="was-validated">
 				<div class="form-group input-group mb-3" id="name">
 					<input id="fname" type="text" class="form-control" placeholder="First Name" autocomplete="on" data-toggle="tooltip" data-placement="left" title="Enter your first name." required>
@@ -66,14 +68,17 @@
 			</form>
 		
 		</div>
+		
+		<!--Using Bootstrap4 cards-->
 		<div class="tab-pane container" id="form2">
 			<div class="d-flex justify-content-center">
-				<div class="card m-2 w-45">
+				<div class="card m-2 cardclass">
 					<div class="card-header p-1">
 						<h3 style="text-align:center">Login</h3>
 					</div>
 					
 					<div class="card-body bg-light pb-0">
+						<div id="err" class="alert alert-danger p-1"><span class="align-middle" id="msg"></span></div>
 						<form>
 							<div class="form-group">
 								<label for="usrname">Username:</label>
@@ -90,23 +95,26 @@
 								<label class="form-check-label"><input type="checkbox" class="form-check-input" value=""> Remember me</label>
 							</div>
 							
-							<button type="button" class="submit btn btn-success btn-block mb-2 w-100">Login</button><br>
+							<button type="button" class="submit btn btn-success btn-block mb-2 w-100" onclick="log()">Login</button><br>
 							<p class="text">Don't have an account? <a href="#sign_up" class="card-link">Sign up</a></p>
 						</form>
 					</div>
 					
 					<div class="card-footer">
 						<p class="text">Or log in with:</p>
-						<a href="#" class="fa fa-facebook facebook"> Facebook</a>
-						<a href="#" class="fa fa-twitter twitter"> Twitter</a>
-						<a href="#" class="fa fa-google google"> Google+</a>
+						<div class="d-flex justify-content-center">
+							<a href="#" class="m-1 fa fa-facebook facebook"> Facebook</a>
+							<a href="#" class="m-1 fa fa-twitter twitter"> Twitter</a>
+							<a href="#" class="m-1 fa fa-google google"> Google+</a>
+						</div>
 					</div>
 				</div>
 			</div>	
 		</div>
 					
 	</div>
-	
+
+<!--Tooltip activation-->
 <script>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   

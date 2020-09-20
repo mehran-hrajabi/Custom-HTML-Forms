@@ -11,6 +11,9 @@
 .text{
 	text-align:center;
 }
+.cardclass{
+	width:30%;
+}
 #name{
 	width:40%;
 }
@@ -22,6 +25,12 @@
 }
 #forgot{
 	font-size:14px;
+}
+#err{
+	display:none;
+	border: 2px solid red;
+	font-size : 14px;
+	text-align : center;
 }
 .facebook {
 	background-color: #3B5998;
